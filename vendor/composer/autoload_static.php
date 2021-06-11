@@ -111,6 +111,7 @@ class ComposerStaticInita67eabb02fbc399655399a7fc1eebcf9
             'Symfony\\Bridge\\PhpUnit\\' => 23,
             'Symfony\\Bridge\\Monolog\\' => 23,
             'Symfony\\Bridge\\Doctrine\\' => 24,
+            'SymfonyCasts\\Bundle\\VerifyEmail\\' => 32,
             'Sensio\\Bundle\\FrameworkExtraBundle\\' => 35,
         ),
         'P' => 
@@ -464,6 +465,10 @@ class ComposerStaticInita67eabb02fbc399655399a7fc1eebcf9
         array (
             0 => __DIR__ . '/..' . '/symfony/doctrine-bridge',
         ),
+        'SymfonyCasts\\Bundle\\VerifyEmail\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/symfonycasts/verify-email-bundle/src',
+        ),
         'Sensio\\Bundle\\FrameworkExtraBundle\\' => 
         array (
             0 => __DIR__ . '/..' . '/sensio/framework-extra-bundle/src',
@@ -601,6 +606,8 @@ class ComposerStaticInita67eabb02fbc399655399a7fc1eebcf9
     );
 
     public static $classMap = array (
+        'App\\Controller\\RegistrationController' => __DIR__ . '/../..' . '/src/Controller/RegistrationController.php',
+        'App\\Controller\\SecurityController' => __DIR__ . '/../..' . '/src/Controller/SecurityController.php',
         'App\\Entity\\ArtCollectible' => __DIR__ . '/../..' . '/src/Entity/ArtCollectible.php',
         'App\\Entity\\Business' => __DIR__ . '/../..' . '/src/Entity/Business.php',
         'App\\Entity\\Cash' => __DIR__ . '/../..' . '/src/Entity/Cash.php',
@@ -620,6 +627,7 @@ class ComposerStaticInita67eabb02fbc399655399a7fc1eebcf9
         'App\\Entity\\Royalties' => __DIR__ . '/../..' . '/src/Entity/Royalties.php',
         'App\\Entity\\UserAccount' => __DIR__ . '/../..' . '/src/Entity/UserAccount.php',
         'App\\Entity\\UserProfile' => __DIR__ . '/../..' . '/src/Entity/UserProfile.php',
+        'App\\Form\\RegistrationFormType' => __DIR__ . '/../..' . '/src/Form/RegistrationFormType.php',
         'App\\Kernel' => __DIR__ . '/../..' . '/src/Kernel.php',
         'App\\Repository\\ArtCollectibleRepository' => __DIR__ . '/../..' . '/src/Repository/ArtCollectibleRepository.php',
         'App\\Repository\\BusinessRepository' => __DIR__ . '/../..' . '/src/Repository/BusinessRepository.php',
@@ -640,6 +648,8 @@ class ComposerStaticInita67eabb02fbc399655399a7fc1eebcf9
         'App\\Repository\\RoyaltiesRepository' => __DIR__ . '/../..' . '/src/Repository/RoyaltiesRepository.php',
         'App\\Repository\\UserAccountRepository' => __DIR__ . '/../..' . '/src/Repository/UserAccountRepository.php',
         'App\\Repository\\UserProfileRepository' => __DIR__ . '/../..' . '/src/Repository/UserProfileRepository.php',
+        'App\\Security\\AuthAuthenticator' => __DIR__ . '/../..' . '/src/Security/AuthAuthenticator.php',
+        'App\\Security\\EmailVerifier' => __DIR__ . '/../..' . '/src/Security/EmailVerifier.php',
         'Attribute' => __DIR__ . '/..' . '/symfony/polyfill-php80/Resources/stubs/Attribute.php',
         'Collator' => __DIR__ . '/..' . '/symfony/polyfill-intl-icu/Resources/stubs/Collator.php',
         'Composer\\InstalledVersions' => __DIR__ . '/..' . '/composer/InstalledVersions.php',
@@ -3193,6 +3203,18 @@ class ComposerStaticInita67eabb02fbc399655399a7fc1eebcf9
         'Sensio\\Bundle\\FrameworkExtraBundle\\SensioFrameworkExtraBundle' => __DIR__ . '/..' . '/sensio/framework-extra-bundle/src/SensioFrameworkExtraBundle.php',
         'Sensio\\Bundle\\FrameworkExtraBundle\\Templating\\TemplateGuesser' => __DIR__ . '/..' . '/sensio/framework-extra-bundle/src/Templating/TemplateGuesser.php',
         'Stringable' => __DIR__ . '/..' . '/symfony/polyfill-php80/Resources/stubs/Stringable.php',
+        'SymfonyCasts\\Bundle\\VerifyEmail\\DependencyInjection\\Configuration' => __DIR__ . '/..' . '/symfonycasts/verify-email-bundle/src/DependencyInjection/Configuration.php',
+        'SymfonyCasts\\Bundle\\VerifyEmail\\DependencyInjection\\SymfonyCastsVerifyEmailExtension' => __DIR__ . '/..' . '/symfonycasts/verify-email-bundle/src/DependencyInjection/SymfonyCastsVerifyEmailExtension.php',
+        'SymfonyCasts\\Bundle\\VerifyEmail\\Exception\\ExpiredSignatureException' => __DIR__ . '/..' . '/symfonycasts/verify-email-bundle/src/Exception/ExpiredSignatureException.php',
+        'SymfonyCasts\\Bundle\\VerifyEmail\\Exception\\InvalidSignatureException' => __DIR__ . '/..' . '/symfonycasts/verify-email-bundle/src/Exception/InvalidSignatureException.php',
+        'SymfonyCasts\\Bundle\\VerifyEmail\\Exception\\VerifyEmailExceptionInterface' => __DIR__ . '/..' . '/symfonycasts/verify-email-bundle/src/Exception/VerifyEmailExceptionInterface.php',
+        'SymfonyCasts\\Bundle\\VerifyEmail\\Exception\\WrongEmailVerifyException' => __DIR__ . '/..' . '/symfonycasts/verify-email-bundle/src/Exception/WrongEmailVerifyException.php',
+        'SymfonyCasts\\Bundle\\VerifyEmail\\Generator\\VerifyEmailTokenGenerator' => __DIR__ . '/..' . '/symfonycasts/verify-email-bundle/src/Generator/VerifyEmailTokenGenerator.php',
+        'SymfonyCasts\\Bundle\\VerifyEmail\\Model\\VerifyEmailSignatureComponents' => __DIR__ . '/..' . '/symfonycasts/verify-email-bundle/src/Model/VerifyEmailSignatureComponents.php',
+        'SymfonyCasts\\Bundle\\VerifyEmail\\SymfonyCastsVerifyEmailBundle' => __DIR__ . '/..' . '/symfonycasts/verify-email-bundle/src/SymfonyCastsVerifyEmailBundle.php',
+        'SymfonyCasts\\Bundle\\VerifyEmail\\Util\\VerifyEmailQueryUtility' => __DIR__ . '/..' . '/symfonycasts/verify-email-bundle/src/Util/VerifyEmailQueryUtility.php',
+        'SymfonyCasts\\Bundle\\VerifyEmail\\VerifyEmailHelper' => __DIR__ . '/..' . '/symfonycasts/verify-email-bundle/src/VerifyEmailHelper.php',
+        'SymfonyCasts\\Bundle\\VerifyEmail\\VerifyEmailHelperInterface' => __DIR__ . '/..' . '/symfonycasts/verify-email-bundle/src/VerifyEmailHelperInterface.php',
         'Symfony\\Bridge\\Doctrine\\CacheWarmer\\ProxyCacheWarmer' => __DIR__ . '/..' . '/symfony/doctrine-bridge/CacheWarmer/ProxyCacheWarmer.php',
         'Symfony\\Bridge\\Doctrine\\ContainerAwareEventManager' => __DIR__ . '/..' . '/symfony/doctrine-bridge/ContainerAwareEventManager.php',
         'Symfony\\Bridge\\Doctrine\\DataCollector\\DoctrineDataCollector' => __DIR__ . '/..' . '/symfony/doctrine-bridge/DataCollector/DoctrineDataCollector.php',
